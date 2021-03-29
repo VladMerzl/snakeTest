@@ -5,10 +5,8 @@ using System.Text;
 
 namespace snakeTest
 {
-    class VerticalLine
+    class VerticalLine : Figure
     {
-        List<Point> pList;
-
         public VerticalLine(int x, int yTop, int yBottom, char sym)
         {
             pList = new List<Point>();
@@ -18,14 +16,6 @@ namespace snakeTest
                 pList.Add(p);
             }
 
-        }
-
-        public void DrawVertical()
-        {
-            foreach(Point p in pList)
-            {
-                p.Draw();
-            }
         }
     }
 }

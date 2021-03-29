@@ -10,17 +10,29 @@ namespace snakeTest
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
+            /*Point p1 = new Point(1, 3, '*');
             p1.Draw();
 
             Point p2 = new Point(4, 5, '#');
-            p2.Draw();
+            p2.Draw();*/
 
-            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
-            line.DrawHorizontal();
+            Console.SetBufferSize(80, 25);
 
-            VerticalLine vLine = new VerticalLine(5, 9, 14, '+');
-            vLine.DrawVertical();
+            //Линия сверху
+            HorizontalLine upperLine = new HorizontalLine(0, 78, 0, '+');
+            upperLine.Draw();
+
+            //Линия снизу
+            HorizontalLine bottomLine = new HorizontalLine(0, 78, 24, '+');
+            bottomLine.Draw();
+            
+            //Линия слева
+            VerticalLine leftLine = new VerticalLine(0, 0, 24, '+');
+            leftLine.Draw();
+
+            //Линия справа
+            VerticalLine rightLine = new VerticalLine(78, 0, 24, '+');
+            rightLine.Draw();
 
             Console.ReadLine();
         }
