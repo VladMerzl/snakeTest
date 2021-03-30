@@ -10,12 +10,6 @@ namespace snakeTest
     {
         static void Main(string[] args)
         {
-            /*Point p1 = new Point(1, 3, '*');
-            p1.Draw();
-
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw();*/
-
             Console.SetBufferSize(80, 25);
 
             //Линия сверху
@@ -33,6 +27,12 @@ namespace snakeTest
             //Линия справа
             VerticalLine rightLine = new VerticalLine(78, 0, 24, '+');
             rightLine.Draw();
+
+            //Создаем змейку
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+
+            snake.Draw();
 
             Console.ReadLine();
         }
