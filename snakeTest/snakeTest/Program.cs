@@ -33,6 +33,7 @@ namespace snakeTest
             Snake snake = new Snake(p, 4, Direction.RIGHT);
 
             snake.Draw();
+            snake.Move();
 
             Console.ReadLine();
         }
